@@ -1,0 +1,10 @@
+D:\BSTU\CISM-3c6s\LR3\LR3\bin\Debug\LR3.exe.config
+D:\BSTU\CISM-3c6s\LR3\LR3\bin\Debug\LR3.exe
+D:\BSTU\CISM-3c6s\LR3\LR3\bin\Debug\LR3.pdb
+D:\BSTU\CISM-3c6s\LR3\LR3\obj\Debug\LR3.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR3\LR3\obj\Debug\LR3.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR3\LR3\obj\Debug\LR3.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR3\LR3\obj\Debug\LR3.exe
+D:\BSTU\CISM-3c6s\LR3\LR3\obj\Debug\LR3.pdb
+D:\BSTU\CISM-3c6s\LR3\LR3\obj\Debug\LR3.UI.resources
+D:\BSTU\CISM-3c6s\LR3\LR3\obj\Debug\LR3.csproj.GenerateResource.cache
