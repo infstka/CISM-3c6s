@@ -1,0 +1,7 @@
+abcdefghijklmnopqrstuvwxyzäöüß
+
+шифр 1:
+hijklmnopqrstuvwxyzäöüßabcdefg
+
+шифр 2:
+bcdeaghikjfmnoplrstuqwxyzväöüß

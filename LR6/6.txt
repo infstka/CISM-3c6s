@@ -1,0 +1,21 @@
+     a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+ ii  a j d k s i r u x b l h w t m c q g z n p y f v o e     
+
+iii  b d f h j l c p r t x v z n y e i w g a k m i s q o 
+
+ iv  e s o v p z j a y q u i r h x l n f t g k d c m w b 
+
+c dunn  ar bd co ej fn gt hk iv lm pw qz sx uy
+
+r(ii)-m(iii)-l(iv)-re-l(iv)-m(iii)-r(ii)
+
+a - a(столбец)
+a - b(столбец)
+b - s(столбец)
+
+re - s->x
+
+iv: x(в строке) - o (столбец)
+iii: o (в строке) - z (столбец)
+iv: z (в строке) - s (столбец)
