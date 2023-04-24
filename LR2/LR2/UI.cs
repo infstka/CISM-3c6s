@@ -46,15 +46,15 @@ namespace LR2
                 alphabetBuf = bulgarian;
             }
 
-            double entropyBuf = EntropyShennon(s, alphabetBuf);
+            double entropyBuf = CalculateShannonEntropy(s, alphabetBuf);
             result.Text += "Энтропия: " + entropyBuf + "\n";
-            result.Text += "Количество информации: " + CountInf(entropyBuf, s.Length) + "\n----------------------------------\n";
+            result.Text += "Количество информации: " + CalculateInformationContent(entropyBuf, s.Length) + "\n----------------------------------\n";
 
             if (error.Checked)
             {
-                result.Text += "Вероятность ошибки 0.1: " + EffectiveEntropy(0.1, 0) * s.Length + "\n";
-                result.Text += "Вероятность ошибки 0.5: " + EffectiveEntropy(0.51, 0) * s.Length + "\n";
-                result.Text += "Вероятность ошибки 1: " + EffectiveEntropy(1, 0) * s.Length + "\n----------------------------------\n";
+                result.Text += "Вероятность ошибки 0.1: " + CalculateEffectiveEntropy(0.1, 0) * s.Length + "\n";
+                result.Text += "Вероятность ошибки 0.5: " + CalculateEffectiveEntropy(0.51, 0) * s.Length + "\n";
+                result.Text += "Вероятность ошибки 1: " + CalculateEffectiveEntropy(1, 0) * s.Length + "\n----------------------------------\n";
             }
 
             if (ASCII.Checked)
@@ -76,94 +76,79 @@ namespace LR2
                 }
 
                 result.Text += ASCIIbuf + "\n----------------------------------\n";
-                entropyBuf = EntropyShennon(ASCIIbuf, "10");
+                entropyBuf = CalculateShannonEntropy(ASCIIbuf, "10");
                 result.Text += "Энтропия (ASCII): " + entropyBuf + "\n";
-                result.Text += "Количество информации (ASCII): " + CountInf(entropyBuf, ASCIIbuf.Length) + "\n----------------------------------\n";
+                result.Text += "Количество информации (ASCII): " + CalculateInformationContent(entropyBuf, ASCIIbuf.Length) + "\n----------------------------------\n";
                
                 if (error.Checked)
                 {
-                    result.Text += "Вероятность ошибки 0.1: " + EffectiveEntropy(0.1, 0) * ASCIIbuf.Length + "\n";
-                    result.Text += "Вероятность ошибки 0.5: " + EffectiveEntropy(0.5, 0) * ASCIIbuf.Length + "\n";
-                    result.Text += "Вероятность ошибки 1: " + EffectiveEntropy(1, EntropyShennon(ASCIIbuf, "10")) * ASCIIbuf.Length + "\n----------------------------------\n";
+                    result.Text += "Вероятность ошибки 0.1: " + CalculateEffectiveEntropy(0.1, 0) * ASCIIbuf.Length + "\n";
+                    result.Text += "Вероятность ошибки 0.5: " + CalculateEffectiveEntropy(0.5, 0) * ASCIIbuf.Length + "\n";
+                    result.Text += "Вероятность ошибки 1: " + CalculateEffectiveEntropy(1, CalculateShannonEntropy(ASCIIbuf, "10")) * ASCIIbuf.Length + "\n----------------------------------\n";
                 }
             }
         }
 
-        private double EntropyShennon(string s, string aplhabet)
+        private double CalculateShannonEntropy(string inputString, string alphabet)
         {
-            double buf = 0;
-            foreach (char character in aplhabet)
+            double entropy = 0;
+            foreach (char c in alphabet)
             {
-                int counter = symbolEntries(character, s);
-                result.Text += "Символ " + character + ": " + "\nКол-во вхождений: " + counter + "\nВероятность вхождения: " + (counter / (double)s.Length) + "\n----------------------------------\n";
-               
-                if ((counter / (double)s.Length) > 0)
+                int count = CountOccurrences(c, inputString);
+                if (count > 0)
                 {
-                    buf -= (counter / (double)s.Length) * Math.Log((counter / (double)s.Length), 2);
+                    double probability = (double)count / inputString.Length;
+                    entropy -= probability * Math.Log(probability, 2);
+                    string resultString = $"Symbol {c}: \nOccurrences: {count}\nProbability: {probability}\n---------------------------\n";
+                    result.Text += resultString;
                 }
             }
-            return buf;
+            return entropy;
         }
 
-        private int symbolEntries(char character, string message)
+        private int CountOccurrences(char character, string inputString)
         {
-            int counter = 0;
-            foreach (char a in message)
+            int count = 0;
+            foreach (char c in inputString)
             {
-                if (character == a)
+                if (character == c)
                 {
-                    counter++;
+                    count++;
                 }
             }
-            return counter;
+            return count;
         }
 
-        private double CountInf(double entropy, int N)
+        private double CalculateInformationContent(double entropy, int n)
         {
-            return entropy * N;
+            return entropy * n;
         }
 
-        private double EffectiveEntropy(double error, double binEntrhopy)
+        private double CalculateEffectiveEntropy(double error, double binaryEntropy)
         {
-            if (binEntrhopy == 0)
+            if (binaryEntropy == 0)
             {
-                if (error == 1)
+                double d = 1 - ((-error) * Math.Log(error, 2) - (1 - error) * Math.Log(1 - error, 2));
+                if (Double.IsNaN(d))
                 {
-                    var d = 1 - ((-error) * Math.Log(error, 2) - (1 - error) * Math.Log(1 - error, 2));
-                    if (Double.IsNaN(d))
-                    {
-                        d = 0;
-                    }
-                    return d;
+                    d = 0;
                 }
-                else
-                {
-                    var d = 1 - ((-error) * Math.Log(error, 2) - (1 - error) * Math.Log(1 - error, 2));
-                    return d;
-                }
+                return d;
             }
             else
             {
-                var d = binEntrhopy;
-                return d;
+                return binaryEntropy;
             }
         }
 
-        private double BinEntropy(string s)
+        private double CalculateBinaryEntropy(string inputString)
         {
-            int counter = 0;
-
-            foreach (char c in s)
-            {
-                Console.WriteLine(counter + ": " + c);
-                counter++;
-            }
-
-            double entropyBuf = EntropyShennon(s, "01");
-            result.Text += "Энтропия: " + entropyBuf + "\n";
-            result.Text += "Количество информации: " + CountInf(entropyBuf, s.Length) + "\n";
+            double entropyBuf = CalculateShannonEntropy(inputString, "01");
+            result.Text += "Entropy: " + entropyBuf + "\n";
+            result.Text += "Information content: " + CalculateInformationContent(entropyBuf, inputString.Length) + "\n";
             return entropyBuf;
         }
+
 
         private void count_Click(object sender, EventArgs e)
         {
@@ -174,7 +159,7 @@ namespace LR2
             }
             else
             {
-                BinEntropy(text.ToLower().Replace(" ", ""));
+                CalculateBinaryEntropy(text.ToLower().Replace(" ", ""));
             }
         }
 
