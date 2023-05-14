@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR9\LR9\bin\Debug\LR9.exe.config
+D:\BSTU\CISM-3c6s\LR9\LR9\bin\Debug\LR9.exe
+D:\BSTU\CISM-3c6s\LR9\LR9\bin\Debug\LR9.pdb
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.UI.resources
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.exe
+D:\BSTU\CISM-3c6s\LR9\LR9\obj\Debug\LR9.pdb
