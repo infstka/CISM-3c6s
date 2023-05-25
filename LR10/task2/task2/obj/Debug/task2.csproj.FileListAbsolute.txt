@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR10\task2\task2\bin\Debug\task2.exe.config
+D:\BSTU\CISM-3c6s\LR10\task2\task2\bin\Debug\task2.exe
+D:\BSTU\CISM-3c6s\LR10\task2\task2\bin\Debug\task2.pdb
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.exe
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.pdb
+D:\BSTU\CISM-3c6s\LR10\task2\task2\obj\Debug\task2.UI.resources

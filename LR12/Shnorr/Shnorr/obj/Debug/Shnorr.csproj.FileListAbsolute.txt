@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\bin\Debug\Shorn.exe.config
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\bin\Debug\Shorn.exe
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\bin\Debug\Shorn.pdb
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shnorr.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shnorr.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shnorr.Form1.resources
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shorn.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shnorr.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shnorr.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shorn.exe
+D:\BSTU\CISM-3c6s\LR12\Shorn\Shorn\obj\Debug\Shorn.pdb

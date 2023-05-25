@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR11\LR11\bin\Debug\LR11.exe.config
+D:\BSTU\CISM-3c6s\LR11\LR11\bin\Debug\LR11.exe
+D:\BSTU\CISM-3c6s\LR11\LR11\bin\Debug\LR11.pdb
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.UI.resources
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.exe
+D:\BSTU\CISM-3c6s\LR11\LR11\obj\Debug\LR11.pdb

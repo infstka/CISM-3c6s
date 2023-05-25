@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\bin\Debug\RSA.exe.config
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\bin\Debug\RSA.exe
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\bin\Debug\RSA.pdb
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.Form1.resources
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.exe
+D:\BSTU\CISM-3c6s\LR12\RSA\RSA\obj\Debug\RSA.pdb

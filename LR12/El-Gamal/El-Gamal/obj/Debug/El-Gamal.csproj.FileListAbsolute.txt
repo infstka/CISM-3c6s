@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\bin\Debug\El-Gamal.exe.config
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\bin\Debug\El-Gamal.exe
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\bin\Debug\El-Gamal.pdb
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El-Gamal.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El-Gamal.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El_Gamal.Form1.resources
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El_Gamal.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El-Gamal.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El-Gamal.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El-Gamal.exe
+D:\BSTU\CISM-3c6s\LR12\El-Gamal\El-Gamal\obj\Debug\El-Gamal.pdb
