@@ -1,0 +1,16 @@
+D:\BSTU\CISM-3c6s\LR15\LR15\bin\Debug\LR15.exe.config
+D:\BSTU\CISM-3c6s\LR15\LR15\bin\Debug\LR15.exe
+D:\BSTU\CISM-3c6s\LR15\LR15\bin\Debug\LR15.pdb
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.Form1.resources
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.exe
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.pdb
+D:\BSTU\CISM-3c6s\LR15\LR15\bin\Debug\Aspose.Words.dll
+D:\BSTU\CISM-3c6s\LR15\LR15\bin\Debug\Aspose.Words.Pdf2Word.dll
+D:\BSTU\CISM-3c6s\LR15\LR15\bin\Debug\Aspose.Words.xml
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.csproj.ResolveComReference.cache
+D:\BSTU\CISM-3c6s\LR15\LR15\obj\Debug\LR15.csproj.CopyComplete

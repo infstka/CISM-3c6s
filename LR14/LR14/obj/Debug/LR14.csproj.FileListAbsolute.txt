@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR14\LR14\bin\Debug\LR14.exe.config
+D:\BSTU\CISM-3c6s\LR14\LR14\bin\Debug\LR14.exe
+D:\BSTU\CISM-3c6s\LR14\LR14\bin\Debug\LR14.pdb
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.Form1.resources
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.exe
+D:\BSTU\CISM-3c6s\LR14\LR14\obj\Debug\LR14.pdb

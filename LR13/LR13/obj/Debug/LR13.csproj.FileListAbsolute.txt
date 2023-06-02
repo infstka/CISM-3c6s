@@ -1,0 +1,11 @@
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.csproj.AssemblyReference.cache
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.csproj.SuggestedBindingRedirects.cache
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.Properties.Resources.resources
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.csproj.GenerateResource.cache
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.csproj.CoreCompileInputs.cache
+D:\BSTU\CISM-3c6s\LR13\LR13\bin\Debug\LR13.exe.config
+D:\BSTU\CISM-3c6s\LR13\LR13\bin\Debug\LR13.exe
+D:\BSTU\CISM-3c6s\LR13\LR13\bin\Debug\LR13.pdb
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.exe
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.pdb
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.Form1.resources
