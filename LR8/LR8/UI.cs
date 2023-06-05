@@ -14,22 +14,26 @@ namespace LR8
         private static readonly int x = 5;
         private static readonly int length = 13;
 
-        private readonly RC4 rc;
-        private readonly RC4 rc2;
-        private byte[] encryptedData;
+        private readonly RC4 first_rc;
+        private readonly RC4 second_rc;
+
+        private byte[] encoded_data;
+
         public UI()
         {
             InitializeComponent();
-            int[] ikey = { 1, 11, 21, 31, 41, 51 };
-            byte[] key = new byte[ikey.Length];
+            int[] key_array = { 1, 11, 21, 31, 41, 51 };
+            byte[] key = new byte[key_array.Length];
 
-            for (int i = 0; i < ikey.Length; i++)
+            for (int i = 0; i < key_array.Length; i++)
             {
-                key[i] = Convert.ToByte(ikey[i]);
+                key[i] = Convert.ToByte(key_array[i]);
             }
 
-            rc = new RC4(key);  // Используется ключ rc для шифрования
-            rc2 = new RC4(key); // Используется ключ rc2 для расшифровки
+            //key for encoding
+            first_rc = new RC4(key);
+            //key for decoding
+            second_rc = new RC4(key);
         }
 
         private void encode_button_Click(object sender, EventArgs e)
@@ -40,24 +44,24 @@ namespace LR8
             // Начинаем измерение времени
             stopwatch.Start();
 
-            string message = input_textbox.Text;
-            byte[] testBytes = ASCIIEncoding.ASCII.GetBytes(message);
+            string text = input_textbox.Text;
+            byte[] bytes = ASCIIEncoding.ASCII.GetBytes(text);
 
-            encryptedData = rc.Encode(testBytes, testBytes.Length);
-            output_textbox.Text = ASCIIEncoding.ASCII.GetString(encryptedData);
+            encoded_data = first_rc.Encode(bytes, bytes.Length);
+            output_textbox.Text = ASCIIEncoding.ASCII.GetString(encoded_data);
 
-            int[] seq = new int[length];
-            int buf = x;
-            string bbsNext = "";
+            int[] sequence = new int[length];
+            int buffer = x;
+            string bbs = "";
             for (int i = 0; i < length; i++)
             {
-                buf = Program.BBSnext(buf, i);
-                seq[i] = buf;
-                bbsNext += $"x{i} = ({buf}*{buf})mod {n} = {buf}\r\n";
+                buffer = Program.BBSnext(buffer, i);
+                sequence[i] = buffer;
+                bbs += $"x{i} = ({buffer} * {buffer})mod {n} = {buffer}\r\n";
             }
 
-            bbs_textbox.Text = bbsNext;
-            psp_textbox.Text = string.Join("; ", seq);
+            bbs_textbox.Text = bbs;
+            psp_textbox.Text = string.Join("; ", sequence);
 
             // Останавливаем измерение времени
             stopwatch.Stop();
@@ -76,7 +80,7 @@ namespace LR8
             // Начинаем измерение времени
             stopwatch.Start();
 
-            byte[] decrypted = rc2.Encode(encryptedData, encryptedData.Length);
+            byte[] decrypted = second_rc.Encode(encoded_data, encoded_data.Length);
             output_textbox.Text = ASCIIEncoding.ASCII.GetString(decrypted);
 
             // Останавливаем измерение времени
@@ -95,7 +99,7 @@ namespace LR8
             bbs_textbox.Clear();
             psp_textbox.Clear();
             exectime_textbox.Clear();
-            encryptedData = null;
+            encoded_data = null;
         }
     }
 }

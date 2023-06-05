@@ -8,10 +8,10 @@ namespace LR9
 {
     public partial class UI : Form
     {
-        Bag r = new Bag();
-        int[] d2;
-        int[] E;
-        int[] C;
+        Bag bag = new Bag();
+        int[] sis;
+        int[] ns;
+        int[] bag_encode;
         int a;
         int n;
 
@@ -22,27 +22,27 @@ namespace LR9
 
         private void generate_button_Click(object sender, EventArgs e)
         {
-            d2 = r.Generate(8);
+            sis = bag.generate_superincreasing_sequence(8);
             string result = "";
-            foreach (var item in d2)
+            foreach (var item in sis)
             {
                 result += item + " ";
             }
             sp_textbox.Text = result;
         }
 
-        private void calc_button_Click(object sender, EventArgs e)
+        private void ns_calc_button_Click(object sender, EventArgs e)
         {
             int sum = 0;
-            foreach (var di in d2)
+            foreach (var di in sis)
             {
                 sum += di;
             }
-            n = r.getN(sum);
-            a = r.getA(n);
-            E = r.getNorm(d2, a, n, d2.Length);
+            n = bag.get_N(sum);
+            a = bag.get_A(n);
+            ns = bag.generate_norm_sequence(sis, a, n, sis.Length);
             string result = "";
-            foreach (var item in E)
+            foreach (var item in ns)
             {
                 result += item + " ";
             }
@@ -57,9 +57,9 @@ namespace LR9
             // Начинаем измерение времени
             stopwatch.Start();
 
-            C = r.encode(E, input_textbox.Text, d2.Length);
+            bag_encode = bag.encode(ns, input_textbox.Text, sis.Length);
             string result = "";
-            foreach (var item in C)
+            foreach (var item in bag_encode)
             {
                 result += item + " ";
             }
@@ -76,9 +76,9 @@ namespace LR9
 
         private void decode_button_Click(object sender, EventArgs e)
         {
-            int a_1 = r.a_1(a, n);
+            int a = bag.a(this.a, n);
             string decodeStr = input_textbox.Text;
-            int[] S = new int[C.Length];
+            int[] S = new int[bag_encode.Length];
             string M2 = "";
 
             // Создаем объект Stopwatch
@@ -87,14 +87,14 @@ namespace LR9
             // Начинаем измерение времени
             stopwatch.Start();
 
-            for (int i = 0; i < C.Length; i++)
+            for (int i = 0; i < bag_encode.Length; i++)
             {
-                S[i] = (C[i] * a_1) % n;
+                S[i] = (bag_encode[i] * a) % n;
             }
 
             foreach (int Si in S)
             {
-                string M2i = r.decode(d2, Si, d2.Length);//110000
+                string M2i = bag.decode(sis, Si, sis.Length);//110000
                 M2 += M2i + " ";
             }
 

@@ -8,20 +8,20 @@ namespace LR9
 {
     class Bag
     {
-        public int[] Generate(int z)
+        public int[] generate_superincreasing_sequence(int z)
         {
-            Random rnd = new Random();
+            Random random = new Random();
             int[] k = new int[z];
             int sum = 0;
             for (int i = 0; i < z; i++)
             {
-                k[i] = rnd.Next(sum, sum + 23);
+                k[i] = random.Next(sum, sum + 23);
                 sum += k[i];
             }
             return k;
         }
 
-        public int[] getNorm(int[] d, int a, int n, int z)
+        public int[] generate_norm_sequence(int[] d, int a, int n, int z)
         {
             int[] e = new int[z];
 
@@ -32,18 +32,16 @@ namespace LR9
             return e;
         }
 
-        // Зашифрование сообщения
         public int[] encode(int[] e, string M, int z)
         {
             int j = 0;
             int[] result = new int[M.Length];
             int total = 0;
 
-
             foreach (char Mi in M)
             {
                 total = 0;
-                string Mi2 = '0' + GetBytes(Mi.ToString()); //110010
+                string Mi2 = '0' + get_bytes(Mi.ToString()); //110010
               
 
                 for (int i = 0; i < Mi2.Length; i++)
@@ -56,7 +54,6 @@ namespace LR9
             return result;
         }
 
-        //Расшифрование сообщения: Si=5, 5-3=2; 2-2=0;  mi=1100000
         public string decode(int[] d, int Si, int z)
         {
             string res = "";
@@ -81,7 +78,7 @@ namespace LR9
             return res2;
         }
 
-        public int a_1(int a, int n)
+        public int a(int a, int n)
         {
             int res = 0;
             for (int i = 0; i < 10000; i++)
@@ -91,7 +88,7 @@ namespace LR9
             return (res);
         }
 
-        public string Str(int[] a)
+        public string str(int[] a)
         {
             string res = "";
             foreach (int x in a)
@@ -101,7 +98,7 @@ namespace LR9
             return res;
         }
 
-        public string GetBytes(String str)
+        public string get_bytes(String str)
         {
             String strB = "";
             for (int i = 0; i < str.Length; i++)
@@ -111,23 +108,25 @@ namespace LR9
             return strB;
         }
 
-        public int getN(int sum)
+        public int get_N(int sum)
         {
             return sum + 1;
         } 
-         public int getA(int n)
+
+         public int get_A(int n)
         {
-            Random rnd = new Random();
+            Random random = new Random();
             while (true)
             {
-                int a = rnd.Next(1, 1000000);
-                if (Evklid(a, n) == 1)
+                int a = random.Next(1, 1000000);
+                if (evklid_algorithm(a, n) == 1)
                 {
                     return a;
                 }
             }  
         }
-        public static int Evklid(int a, int b)
+
+        public static int evklid_algorithm(int a, int b)
         {
             while (a != b)
             {

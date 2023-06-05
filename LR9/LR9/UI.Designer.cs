@@ -149,7 +149,7 @@
             this.calc_button.TabIndex = 15;
             this.calc_button.Text = "Вычислить";
             this.calc_button.UseVisualStyleBackColor = true;
-            this.calc_button.Click += new System.EventHandler(this.calc_button_Click);
+            this.calc_button.Click += new System.EventHandler(this.ns_calc_button_Click);
             // 
             // np_textbox
             // 

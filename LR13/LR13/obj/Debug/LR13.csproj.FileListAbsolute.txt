@@ -8,4 +8,4 @@ D:\BSTU\CISM-3c6s\LR13\LR13\bin\Debug\LR13.exe
 D:\BSTU\CISM-3c6s\LR13\LR13\bin\Debug\LR13.pdb
 D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.exe
 D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.pdb
-D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.Form1.resources
+D:\BSTU\CISM-3c6s\LR13\LR13\obj\Debug\LR13.UI.resources

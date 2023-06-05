@@ -179,7 +179,7 @@
             this.EG_Decode.TabIndex = 21;
             this.EG_Decode.Text = "Расшифровать";
             this.EG_Decode.UseVisualStyleBackColor = true;
-            this.EG_Decode.Click += new System.EventHandler(this.EG_Decode_Click);
+            this.EG_Decode.Click += new System.EventHandler(this.EG_Decrypt_Click);
             // 
             // EG_Output
             // 

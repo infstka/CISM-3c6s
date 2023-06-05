@@ -26,9 +26,9 @@ namespace LR11
             MD5 md5 = new MD5CryptoServiceProvider();
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            byte[] hashenc = md5.ComputeHash(hash);
+            byte[] encode_hash = md5.ComputeHash(hash);
 
-            foreach (var b in hashenc)
+            foreach (var b in encode_hash)
             {
                 output_textbox.Text += b.ToString("x2");
             }

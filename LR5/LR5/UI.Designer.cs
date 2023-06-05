@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.input_textbox = new System.Windows.Forms.TextBox();
-            this.MPString_textbox = new System.Windows.Forms.TextBox();
+            this.NOS_textbox = new System.Windows.Forms.TextBox();
             this.time_textbox = new System.Windows.Forms.TextBox();
             this.decrypt_button = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.choosePerm_combobox = new System.Windows.Forms.ComboBox();
+            this.permutation_combobox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.result_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.MPString_label = new System.Windows.Forms.Label();
+            this.NOS_label = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.table_textbox = new System.Windows.Forms.TextBox();
@@ -56,13 +56,13 @@
             this.input_textbox.Size = new System.Drawing.Size(227, 412);
             this.input_textbox.TabIndex = 0;
             // 
-            // MPString_textbox
+            // NOS_textbox
             // 
-            this.MPString_textbox.Location = new System.Drawing.Point(245, 133);
-            this.MPString_textbox.Name = "MPString_textbox";
-            this.MPString_textbox.Size = new System.Drawing.Size(194, 20);
-            this.MPString_textbox.TabIndex = 1;
-            this.MPString_textbox.Visible = false;
+            this.NOS_textbox.Location = new System.Drawing.Point(245, 133);
+            this.NOS_textbox.Name = "NOS_textbox";
+            this.NOS_textbox.Size = new System.Drawing.Size(194, 20);
+            this.NOS_textbox.TabIndex = 1;
+            this.NOS_textbox.Visible = false;
             // 
             // time_textbox
             // 
@@ -91,17 +91,17 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.encrypt_button_Click);
             // 
-            // choosePerm_combobox
+            // permutation_combobox
             // 
-            this.choosePerm_combobox.FormattingEnabled = true;
-            this.choosePerm_combobox.Items.AddRange(new object[] {
+            this.permutation_combobox.FormattingEnabled = true;
+            this.permutation_combobox.Items.AddRange(new object[] {
             "Route",
             "Multiple"});
-            this.choosePerm_combobox.Location = new System.Drawing.Point(245, 25);
-            this.choosePerm_combobox.Name = "choosePerm_combobox";
-            this.choosePerm_combobox.Size = new System.Drawing.Size(194, 21);
-            this.choosePerm_combobox.TabIndex = 5;
-            this.choosePerm_combobox.SelectedIndexChanged += new System.EventHandler(this.choosePerm_combobox_SelectedIndexChanged);
+            this.permutation_combobox.Location = new System.Drawing.Point(245, 25);
+            this.permutation_combobox.Name = "permutation_combobox";
+            this.permutation_combobox.Size = new System.Drawing.Size(194, 21);
+            this.permutation_combobox.TabIndex = 5;
+            this.permutation_combobox.SelectedIndexChanged += new System.EventHandler(this.choose_permutation);
             // 
             // label1
             // 
@@ -139,15 +139,15 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Выберите вид перестановки";
             // 
-            // MPString_label
+            // NOS_label
             // 
-            this.MPString_label.AutoSize = true;
-            this.MPString_label.Location = new System.Drawing.Point(242, 117);
-            this.MPString_label.Name = "MPString_label";
-            this.MPString_label.Size = new System.Drawing.Size(142, 13);
-            this.MPString_label.TabIndex = 10;
-            this.MPString_label.Text = "Введите количество строк";
-            this.MPString_label.Visible = false;
+            this.NOS_label.AutoSize = true;
+            this.NOS_label.Location = new System.Drawing.Point(242, 117);
+            this.NOS_label.Name = "NOS_label";
+            this.NOS_label.Size = new System.Drawing.Size(142, 13);
+            this.NOS_label.TabIndex = 10;
+            this.NOS_label.Text = "Введите количество строк";
+            this.NOS_label.Visible = false;
             // 
             // label5
             // 
@@ -217,16 +217,16 @@
             this.Controls.Add(this.table_textbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.MPString_label);
+            this.Controls.Add(this.NOS_label);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.result_textbox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.choosePerm_combobox);
+            this.Controls.Add(this.permutation_combobox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.decrypt_button);
             this.Controls.Add(this.time_textbox);
-            this.Controls.Add(this.MPString_textbox);
+            this.Controls.Add(this.NOS_textbox);
             this.Controls.Add(this.input_textbox);
             this.Name = "UI";
             this.Text = "UI";
@@ -238,16 +238,16 @@
         #endregion
 
         private System.Windows.Forms.TextBox input_textbox;
-        private System.Windows.Forms.TextBox MPString_textbox;
+        private System.Windows.Forms.TextBox NOS_textbox;
         private System.Windows.Forms.TextBox time_textbox;
         private System.Windows.Forms.Button decrypt_button;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox choosePerm_combobox;
+        private System.Windows.Forms.ComboBox permutation_combobox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox result_textbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label MPString_label;
+        private System.Windows.Forms.Label NOS_label;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox table_textbox;

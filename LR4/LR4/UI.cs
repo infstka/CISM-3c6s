@@ -33,6 +33,45 @@ namespace LR4
             }
         }
 
+        static char[,] trisemus_table_generation(string keyword)
+        {
+            char[] german_alphabet = "abcdefghijklmnopqrstuvwxyzäöüß".ToCharArray();
+            char[,] trisemus_table = new char[5, 5];
+            string key = keyword.ToLower().Replace('j', 'i') + new string(german_alphabet).Replace('j', 'i');
+            key = new string(key.Distinct().ToArray());
+
+            int k = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    trisemus_table[i, j] = key[k];
+                    k++;
+                }
+            }
+
+            return trisemus_table;
+        }
+
+        static void find_character(char c, char[,] table, out int row, out int col)
+        {
+            row = -1;
+            col = -1;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (table[i, j] == c)
+                    {
+                        row = i;
+                        col = j;
+                        return;
+                    }
+                }
+            }
+        }
+
         private void encode_button_Click(object sender, EventArgs e)
         {
             if (cipher_combobox.SelectedIndex == 0)
@@ -81,14 +120,14 @@ namespace LR4
                 stopwatch.Start();
 
                 char[] alphabet = "abcdefghijklmnopqrstuvwxyzäöüß".ToCharArray();
-                char[,] trisemusTable = GenerateTrisemusTable(keyword);
+                char[,] trisemusTable = trisemus_table_generation(keyword);
 
                 string encryptedText = "";
                 for (int i = 0; i < input_textbox.Text.Length; i++)
                 {
                     char c = input_textbox.Text[i];
                     int row, col;
-                    FindCharInTable(c, trisemusTable, out row, out col);
+                    find_character(c, trisemusTable, out row, out col);
 
                     if (row >= 0 && col >= 0)
                     {
@@ -180,7 +219,7 @@ namespace LR4
                 stopwatch.Start();
 
                 char[] alphabet = "abcdefghijklmnopqrstuvwxyzäöüß".ToCharArray();
-                char[,] trisemusTable = GenerateTrisemusTable(keyword);
+                char[,] trisemusTable = trisemus_table_generation(keyword);
 
                 string decryptedText = "";
                 for (int i = 0; i < input_textbox.Text.Length; i++)
@@ -194,7 +233,7 @@ namespace LR4
                     }
 
                     int row, col;
-                    FindCharInTable(c, trisemusTable, out row, out col);
+                    find_character(c, trisemusTable, out row, out col);
 
                     if (row >= 0 && col >= 0)
                     {
@@ -229,45 +268,6 @@ namespace LR4
 
                 execTime_textbox.Text = $"{elapsedMilliseconds} мс";
                 output_textbox.Text = decryptedText;
-            }
-        }
-
-        static char[,] GenerateTrisemusTable(string keyword)
-        {
-            char[] alphabet = "abcdefghijklmnopqrstuvwxyzäöüß".ToCharArray();
-            char[,] table = new char[5, 5];
-            string key = keyword.ToLower().Replace('j', 'i') + new string(alphabet).Replace('j', 'i');
-            key = new string(key.Distinct().ToArray());
-
-            int k = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    table[i, j] = key[k];
-                    k++;
-                }
-            }
-
-            return table;
-        }
-
-        static void FindCharInTable(char c, char[,] table, out int row, out int col)
-        {
-            row = -1;
-            col = -1;
-
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    if (table[i, j] == c)
-                    {
-                        row = i;
-                        col = j;
-                        return;
-                    }
-                }
             }
         }
     }
